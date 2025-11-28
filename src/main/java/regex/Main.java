@@ -38,9 +38,8 @@ public class Main {
      * @return whether the string satisfies the password requirements
      */
     public static boolean checkForPassword(String str, int minLength) {
-        final boolean propertyOne = Pattern.matches("REPLACE WITH CORRECT REGEX", str);
-        // as needed, modify this code.
-        return propertyOne;
+        final String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{" + minLength + ",}$";
+        return Pattern.matches(regex, str);
     }
 
     // Method 2 for checking if a string conforms to a regex: using Matcher.find
