@@ -67,6 +67,6 @@ public class Main {
      * @return whether str contains the same capital letter twice.
      */
     public static boolean checkForDoubles(String str) {
-        return str.matches("replace with correct regex");
+        return str.matches(".*([A-Z]).*\\1.*");
     }
 }
