@@ -1,22 +1,29 @@
-# Instructions
+# Regex Mini Assignment (Java)
 
-This mini assignment gives you practice with regex in Java.
-You will implement three methods that use Java in different
-ways to work with regex to perform common tasks. 
+This is a CSC207 (Software Design, University of Toronto) mini assignment.
 
-- [ ] Create your own copy of this template repo.
+## What it does
 
-- [ ] Complete the three methods in class [Main](src/main/java/regex/Main.java) so that they pass the provided `MainTest`
-     tests in class [MainTests](src/test/java/regex/MainTest.java).
+- Validates passwords with one regular expression that requires a lowercase letter, an uppercase letter, a digit, and a minimum length (`Main.checkForPassword`).
+- Extracts University of Toronto email addresses (`utoronto.ca` and `mail.utoronto.ca`) from free text using `Pattern` and `Matcher.find` (`Main.extractEmails`).
+- Detects whether a string contains the same capital letter twice, using `String.matches` with a backreference (`Main.checkForDoubles`).
 
-  > Note: you will earn full credit as long as the provided tests pass.
-  >
-  > While there are **no hidden tests** for this assignment, we do encourage you
-  > to still write your own additional test cases, as the provided test set does not cover
-  > _all_ edge cases. When creating a regex, it is important to both think
-  > of which strings it _should_ match and which strings it _should not_ match.
+## Key concepts
 
-- [ ] Ensure that you have committed and pushed your work to your repo on GitHub.
+- Choosing between `Pattern.matches`, `Matcher.find`, and `String.matches`
+- Lookahead assertions and character classes
+- Capture groups and backreferences
+- Null-safe input handling
+- Writing JUnit 5 tests for both matching and non-matching strings
 
-- [ ] On MarkUs, submit a link to your GitHub repo.
-  > **Run the self tests to confirm that your submission is complete.**
+## Running the tests
+
+From the project root (JDK 11 or newer, with Maven):
+
+    mvn test
+
+The provided `MainTest` suite passes with the current implementation.
+
+---
+
+Course starter code provided by the CSC207 teaching team; implementation by Aaryan Patel.
